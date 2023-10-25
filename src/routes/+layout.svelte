@@ -20,6 +20,9 @@
 			href="/password-generator"
 			selected={$page.url.pathname === '/password-generator'}>Password Generator</AppRailAnchor
 		>
+		<AppRailAnchor href="/bmi-calculator" selected={$page.url.pathname === '/bmi-calculator'}
+			>BMI Calculator</AppRailAnchor
+		>
 		<!-- --- -->
 		<!-- <svelte:fragment slot="trail">
 			<AppRailAnchor href="/" target="_blank" title="Account">TB</AppRailAnchor>
