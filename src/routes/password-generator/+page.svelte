@@ -2,21 +2,31 @@
 	import { RangeSlider, ListBox, ListBoxItem, clipboard } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 
+	// Define the initial values and state variables
 	let passwordLength = 12;
 	let passwordContent = ['uppercase', 'lowercase', 'numbers', 'symbols'];
 	let password = '';
 
-	function generatePassword(arr) {
+	/**
+	 * Generates a random password based on the selected content types.
+	 * @param {Array} content - The array of selected content types.
+	 */
+	function generatePassword(content) {
+		// Define the character sets for each content type
 		const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 		const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		const numbers = '0123456789';
 		const symbols = '!@#$%^&*';
 
+		// Reset the password
 		password = '';
 
+		// Generate each character of the password
 		for (let i = 0; i < passwordLength; i++) {
-			const randomCharType = arr[Math.floor(Math.random() * arr.length)];
+			// Choose a random content type
+			const randomCharType = content[Math.floor(Math.random() * content.length)];
 
+			// Append a random character from the chosen content type
 			switch (randomCharType) {
 				case 'uppercase':
 					password += uppercase[Math.floor(Math.random() * uppercase.length)];
@@ -36,6 +46,7 @@
 		}
 	}
 
+	// Generate the initial password on component mount
 	onMount(() => {
 		generatePassword(passwordContent);
 	});
