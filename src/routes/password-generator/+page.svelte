@@ -75,7 +75,7 @@
 		</div>
 		<div class="card p-3 rounded-md space-y-2">
 			<p>Password contains:</p>
-			<ListBox multiple>
+			<ListBox class="grid grid-cols-2 gap-3" multiple>
 				<ListBoxItem bind:group={passwordContent} name="medium" value="uppercase">A-Z</ListBoxItem>
 				<ListBoxItem bind:group={passwordContent} name="medium" value="lowercase">a-z</ListBoxItem>
 				<ListBoxItem bind:group={passwordContent} name="medium" value="numbers">0-9</ListBoxItem>
