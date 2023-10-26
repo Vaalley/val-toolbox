@@ -23,6 +23,7 @@
 		<AppRailAnchor href="/bmi-calculator" selected={$page.url.pathname === '/bmi-calculator'}
 			>BMI Calculator</AppRailAnchor
 		>
+		<AppRailAnchor href="/trivia" selected={$page.url.pathname === '/trivia'}>Trivia</AppRailAnchor>
 		<!-- --- -->
 		<!-- <svelte:fragment slot="trail">
 			<AppRailAnchor href="/" target="_blank" title="Account">TB</AppRailAnchor>
