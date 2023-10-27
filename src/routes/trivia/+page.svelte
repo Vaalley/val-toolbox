@@ -63,7 +63,7 @@
 					>
 				</h3>
 			</div>
-			<h2 class="h2 font-medium text-center">
+			<h2 class="h2 font-bold text-center">
 				{question}
 			</h2>
 			{#if type === 'multiple'}
@@ -80,6 +80,9 @@
 					<button class="btn variant-filled" on:click={() => checkAnswer('False')}>False</button>
 				</div>
 			{/if}
+			<button class="btn variant-filled h3 font-medium" on:click={() => getQuestion()}
+				>Next question</button
+			>
 		{/if}
 	</div>
 	<a
