@@ -13,7 +13,10 @@
 			.then((response) => response.json())
 			.then((data) => {
 				console.log(data);
-				question = data.results[0].question.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+				question = data.results[0].question
+					.replace(/&quot;/g, '"')
+					.replace(/&#039;/g, "'")
+					.replace(/&amp;/g, '&');
 				category = data.results[0].category;
 				difficulty = data.results[0].difficulty;
 				correctAnswer = data.results[0].correct_answer
