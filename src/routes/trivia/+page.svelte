@@ -21,7 +21,8 @@
 				difficulty = data.results[0].difficulty;
 				correctAnswer = data.results[0].correct_answer
 					.replace(/&quot;/g, '"')
-					.replace(/&#039;/g, "'");
+					.replace(/&#039;/g, "'")
+					.replace(/&amp;/g, '&');
 				allAnswers = data.results[0].incorrect_answers.map((answer) =>
 					answer.replace(/&quot;/g, '"').replace(/&#039;/g, "'")
 				);
