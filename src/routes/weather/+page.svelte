@@ -12,7 +12,7 @@
 	</div>
 	<a
 		class="anchor mt-2 text-sm"
-		href="https://github.com/Vaalley/val-toolbox/blob/main/src/routes/bmi-calculator/%2Bpage.svelte"
+		href="https://github.com/Vaalley/val-toolbox/blob/main/src/routes/weather/%2Bpage.svelte"
 		target="_blank"
 		rel="noreferrer">Click here to get to this page's source code.</a
 	>
