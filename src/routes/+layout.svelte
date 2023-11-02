@@ -24,6 +24,9 @@
 			>BMI Calculator</AppRailAnchor
 		>
 		<AppRailAnchor href="/trivia" selected={$page.url.pathname === '/trivia'}>Trivia</AppRailAnchor>
+		<AppRailAnchor href="/weather" selected={$page.url.pathname === '/weather'}
+			>Weather</AppRailAnchor
+		>
 		<!-- --- -->
 		<!-- <svelte:fragment slot="trail">
 			<AppRailAnchor href="/" target="_blank" title="Account">TB</AppRailAnchor>
