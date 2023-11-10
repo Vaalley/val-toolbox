@@ -1,6 +1,7 @@
 <script>
 	import { RadioGroup, RadioItem } from '@skeletonlabs/skeleton';
 
+	// need to hide apikey
 	const apiKey = '1587159bb0692bc32c752afb5ebd8948';
 	let city;
 	let unit = 0;
@@ -22,9 +23,9 @@
 </svelte:head>
 
 <main class="container mx-auto flex flex-col items-center">
-	<h1 class="h1 mt-16 font-bold">Weather</h1>
+	<h1 class="h1 mt-16 font-bold font-outfit">Weather</h1>
 	<div class="mt-16 card p-5 w-fit space-y-5 min-w-[400px]">
-		<h2 class="h2 font-medium">Weather for {city ? city : 'your location'} is:</h2>
+		<h2 class="h2 font-medium font-outfit">Weather for {city ? city : 'your location'} is:</h2>
 		<div class="flex gap-3">
 			<input
 				bind:value={city}
@@ -46,25 +47,25 @@
 		{#if data}
 			<div class="card p-5 grid grid-cols-2 gap-5">
 				<div>
-					<h3 class="h3 font-medium">🌍 Country:</h3>
+					<h3 class="h3 font-medium font-outfit">🌍 Country:</h3>
 					<p>{data.sys.country}</p>
 					<p>Timezone: {data.timezone}</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">🎛️ Description:</h3>
+					<h3 class="h3 font-medium font-outfit">🎛️ Description:</h3>
 					<p>{data.weather[0].description}</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">💨 Wind:</h3>
+					<h3 class="h3 font-medium font-outfit">💨 Wind:</h3>
 					<p>{data.wind.speed} {unit === 0 ? 'm/s' : 'mph'}</p>
 					<p>{data.wind.deg}°</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">💧 Humidity:</h3>
+					<h3 class="h3 font-medium font-outfit">💧 Humidity:</h3>
 					<p>{data.main.humidity}%</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">🌡️ Temperature:</h3>
+					<h3 class="h3 font-medium font-outfit">🌡️ Temperature:</h3>
 					<p>{data.main.temp}°{unit === 0 ? 'C' : 'F'}</p>
 					<p>Feels like: {data.main.feels_like}°{unit === 0 ? 'C' : 'F'}</p>
 					<p>
@@ -73,11 +74,11 @@
 					</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">☁️ Clouds:</h3>
+					<h3 class="h3 font-medium font-outfit">☁️ Clouds:</h3>
 					<p>{data.clouds.all}%</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">📍 Coordinates:</h3>
+					<h3 class="h3 font-medium font-outfit">📍 Coordinates:</h3>
 					<p>{data.coord.lat}, {data.coord.lon}</p>
 					<p>
 						Link to Google Maps: <a
@@ -89,7 +90,7 @@
 					</p>
 				</div>
 				<div>
-					<h3 class="h3 font-medium">🎚️ Pressure:</h3>
+					<h3 class="h3 font-medium font-outfit">🎚️ Pressure:</h3>
 					<p>{data.main.pressure} hPa</p>
 				</div>
 			</div>

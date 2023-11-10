@@ -57,16 +57,17 @@
 </svelte:head>
 
 <main class="container mx-auto flex flex-col items-center">
-	<h1 class="h1 mt-16 font-bold">Password Generator</h1>
+	<h1 class="h1 mt-16 font-bold font-outfit">Password Generator</h1>
 	<div class="mt-16 card p-5 w-fit space-y-5 min-w-[400px]">
-		<h2 class="h2 font-medium">Password:</h2>
+		<h2 class="h2 font-medium font-outfit">Password:</h2>
 		<div class="card p-3 rounded-md space-y-2 flex flex-col justify-center items-center">
-			<p class="text-center h3 text-primary-500">{password}</p>
+			<p class="text-center h3 text-primary-500 font-outfit">{password}</p>
 			<div>
-				<button class="btn variant-filled" on:click={() => generatePassword(passwordContent)}
-					>Generate</button
+				<button
+					class="btn variant-filled font-outfit"
+					on:click={() => generatePassword(passwordContent)}>Generate</button
 				>
-				<button class="btn variant-filled" use:clipboard={password}>Copy</button>
+				<button class="btn variant-filled font-outfit" use:clipboard={password}>Copy</button>
 			</div>
 		</div>
 		<div class="card p-3 rounded-md space-y-2">

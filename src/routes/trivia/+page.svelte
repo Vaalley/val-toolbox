@@ -50,14 +50,14 @@
 </svelte:head>
 
 <main class="container mx-auto flex flex-col items-center">
-	<h1 class="h1 mt-16 font-bold">Trivia</h1>
+	<h1 class="h1 mt-16 font-bold font-outfit">Trivia</h1>
 	<div class="mt-16 card p-5 w-fit space-y-5 min-w-[400px] max-w-[800px]">
 		{#if !question}
-			<h2 class="h2 font-medium text-center">Loading 🔃</h2>
+			<h2 class="h2 font-medium text-center font-outfit">Loading 🔃</h2>
 		{:else}
 			<div class="grid grid-cols-2 text-center">
-				<h3 class="h3">Category: {category}</h3>
-				<h3 class="h3">
+				<h3 class="h3 font-outfit">Category: {category}</h3>
+				<h3 class="h3 font-outfit">
 					Difficulty: <span
 						style="color: {difficulty === 'easy'
 							? 'green'
@@ -67,24 +67,29 @@
 					>
 				</h3>
 			</div>
-			<h2 class="h2 font-bold text-center">
+			<h2 class="h2 font-bold text-center font-outfit">
 				{question}
 			</h2>
 			{#if type === 'multiple'}
 				<div class="card p-5 rounded-md grid grid-cols-2 gap-3">
 					{#each allAnswers as answer}
-						<button class="btn variant-filled" on:click={() => checkAnswer(answer)}>{answer}</button
+						<button class="btn variant-filled font-outfit" on:click={() => checkAnswer(answer)}
+							>{answer}</button
 						>
 					{/each}
 				</div>
 			{/if}
 			{#if type === 'boolean'}
 				<div class="card p-3 rounded-md space-y-2">
-					<button class="btn variant-filled" on:click={() => checkAnswer('True')}>True</button>
-					<button class="btn variant-filled" on:click={() => checkAnswer('False')}>False</button>
+					<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('True')}
+						>True</button
+					>
+					<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('False')}
+						>False</button
+					>
 				</div>
 			{/if}
-			<button class="btn variant-filled h3 font-medium" on:click={() => getQuestion()}
+			<button class="btn variant-filled h3 font-medium font-outfit" on:click={() => getQuestion()}
 				>Next question</button
 			>
 		{/if}

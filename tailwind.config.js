@@ -12,7 +12,11 @@ export default {
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				outfit: ['Outfit', 'sans-serif']
+			}
+		}
 	},
 	plugins: [
 		forms,

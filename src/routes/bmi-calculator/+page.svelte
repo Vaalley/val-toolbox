@@ -17,13 +17,13 @@
 </svelte:head>
 
 <main class="container mx-auto flex flex-col items-center">
-	<h1 class="h1 mt-16 font-bold">BMI Calculator</h1>
+	<h1 class="h1 mt-16 font-bold font-outfit">BMI Calculator</h1>
 	<div class="mt-16 card p-5 w-fit space-y-5 min-w-[400px]">
-		<h2 class="h2 font-medium">Your BMI is: {bmi}</h2>
+		<h2 class="h2 font-medium font-outfit">Your BMI is: {bmi}</h2>
 		<input bind:value={weight} class="input" placeholder="Enter your weight in kg" type="text" />
 		<input bind:value={height} class="input" placeholder="Enter your height in cm" type="text" />
 		<div class="flex gap-5">
-			<button on:click={() => calculateBMI(weight, height)} class="btn variant-filled"
+			<button on:click={() => calculateBMI(weight, height)} class="btn variant-filled font-outfit"
 				>Calculate</button
 			>
 		</div>
