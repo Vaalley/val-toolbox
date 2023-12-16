@@ -8,5 +8,5 @@
 		Welcome to Val's Toolbox, this website is an assortment of small tools I built for myself and
 		others.
 	</p>
-	<p class="mt-2">Just use the app rail on the left to get started.</p>
+	<p class="mt-2">Just use the app rail on the left to get started!</p>
 </main>
