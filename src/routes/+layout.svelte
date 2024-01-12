@@ -27,9 +27,6 @@
 		<AppRailAnchor href="/weather" selected={$page.url.pathname === '/weather'}
 			>Weather</AppRailAnchor
 		>
-		<AppRailAnchor href="/timer-stopwatch" selected={$page.url.pathname === '/timer-stopwatch'}
-			>Timer / Stopwatch</AppRailAnchor
-		>
 		<!-- --- -->
 		<!-- <svelte:fragment slot="trail">
 			<AppRailAnchor href="/" target="_blank" title="Account">TB</AppRailAnchor>

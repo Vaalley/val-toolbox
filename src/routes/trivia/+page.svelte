@@ -17,14 +17,20 @@
 					.replace(/&quot;/g, '"')
 					.replace(/&#039;/g, "'")
 					.replace(/&amp;/g, '&');
-				category = data.results[0].category;
+				category = data.results[0].category
+					.replace(/&quot;/g, '"')
+					.replace(/&#039;/g, "'")
+					.replace(/&amp;/g, '&');
 				difficulty = data.results[0].difficulty;
 				correctAnswer = data.results[0].correct_answer
 					.replace(/&quot;/g, '"')
 					.replace(/&#039;/g, "'")
 					.replace(/&amp;/g, '&');
 				allAnswers = data.results[0].incorrect_answers.map((answer) =>
-					answer.replace(/&quot;/g, '"').replace(/&#039;/g, "'")
+					answer
+						.replace(/&quot;/g, '"')
+						.replace(/&#039;/g, "'")
+						.replace(/&amp;/g, '&')
 				);
 				allAnswers.push(correctAnswer);
 				allAnswers = allAnswers.sort(() => Math.random() - 0.5);
@@ -56,7 +62,7 @@
 			<h2 class="h2 font-medium text-center font-outfit">Loading 🔃</h2>
 		{:else}
 			<div class="grid grid-cols-2 text-center">
-				<h3 class="h3 font-outfit">Category: {category}</h3>
+				<h3 class="h3 font-outfit">{category}</h3>
 				<h3 class="h3 font-outfit">
 					Difficulty: <span
 						style="color: {difficulty === 'easy'
@@ -81,17 +87,21 @@
 			{/if}
 			{#if type === 'boolean'}
 				<div class="card p-3 rounded-md space-y-2">
-					<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('True')}
-						>True</button
-					>
-					<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('False')}
-						>False</button
-					>
+					<div class="flex justify-center gap-3">
+						<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('True')}
+							>True</button
+						>
+						<button class="btn variant-filled font-outfit" on:click={() => checkAnswer('False')}
+							>False</button
+						>
+					</div>
 				</div>
 			{/if}
-			<button class="btn variant-filled h3 font-medium font-outfit" on:click={() => getQuestion()}
-				>Next question</button
-			>
+			<div class="w-full flex justify-center">
+				<button class="btn variant-filled h3 font-medium font-outfit" on:click={() => getQuestion()}
+					>Next question</button
+				>
+			</div>
 		{/if}
 	</div>
 	<a
